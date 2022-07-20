@@ -1,14 +1,14 @@
 # Spring + SpringMVC + Mybatis 整合
 
-##整体架构
+## 整体架构
 
 - Spring IOC 容器，负责管理除了controller层的bean
 - SpringMVC IOC 容器只负责管理controller层，以Spring IOC 为父容器
 - Mybatis负责数据持久层，crud
 
-##SSM整合
+## SSM整合
 
-###1.Maven 引入依赖
+### 1.Maven 引入依赖
 
 - springMVC依赖
 - spring依赖
@@ -139,7 +139,7 @@
     </dependencies>
 ```
 
-###2.配置web.xml
+### 2.配置web.xml
 
 - 过滤器（编码，响应，请求方式）
 - 前端控制器 DispatcherServlet,指定springMVC 配置文件
@@ -210,7 +210,7 @@
 </web-app>
 ```
 
-###3.配置springMVC配置文件
+### 3.配置springMVC配置文件
 
 - 开启扫描组件，只扫描controller层
 - 配置视图解析器
@@ -271,9 +271,9 @@
 </beans>
 ```
 
-###4.MyBatis配置
+### 4.MyBatis配置
 
-####1.jdbc.properties
+#### 1.jdbc.properties
 
 ```properties
 jdbc.user=root
@@ -282,7 +282,7 @@ jdbc.url=jdbc:mysql://localhost:3306/ssm?serverTimezone=UTC
 jdbc.driver=com.mysql.cj.jdbc.Driver
 ```
 
-####2.mybatis 核心配置文件
+#### 2.mybatis 核心配置文件
 
 - 字段命名
 - 插件
@@ -307,9 +307,9 @@ jdbc.driver=com.mysql.cj.jdbc.Driver
 </configuration>
 ```
 
-####3.mapper 接口和对应映射文件
+#### 3.mapper 接口和对应映射文件
 
-####4.日志文件 log4j.xml
+#### 4.日志文件 log4j.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -336,7 +336,7 @@ jdbc.driver=com.mysql.cj.jdbc.Driver
 
 ```
 
-###5.配置spring配置文件
+### 5.配置spring配置文件
 
 - 开启组件扫描
 - 配置数据源
